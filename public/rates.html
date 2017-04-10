@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition  v 1.16
+     
+
+      Individual Project Template
+  
+      Author: Adelhardt, Ryan
+      Date:   
+
+      Filename: rates.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
+   <title>PC Support Pros - Rates</title>
+   <link rel="stylesheet" media="screen and (max-device-width: 999px)" href="projhand.css" />
+   <link rel="stylesheet" media="screen and (min-device-width: 1000px)" href="project.css" />
+ 
+   <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet"> 
+
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+   <div id="container">
+      <header>
+         <h1>
+            <img src="https://cdn.gomix.com/4d1bdeab-81d4-4367-a83f-aca95f804cdf%2FdTrez8jGc1.png" />
+         </h1>
+      </header>
+
+      <nav>
+         <ul>
+            <li><a href="home.html">Home</a></li>
+            <li id="services"><a href="services.html">Services</a></li>
+            <li id="currentpage"><a href="rates.html">Rates</a></li>
+            <li id="aboutus"><a href="aboutus.html">About Us</a></li>      
+        </ul> 
+      </nav>
+        <!-- Below HTML code is adding a list of services along with checkboxes to be used within the HTML's coded calculator -->
+      <article>
+         <h2>Service Estimate Calculator</h2>
+          <form>
+         <input type="checkbox" id="item1" value="8" />
+         <label for="item1">Troubleshooting Operating System ($50.00)</label> <br> <br>
+         <input type="checkbox" id="item2" value="10" />
+         <label for="item2">Troubleshooting Networking Issues ($75.00)</label> <br> <br>
+         <input type="checkbox" id="item3" value="8" />
+         <label for="item3">Hardware Issues or Upgrades ($100.00)</label> <br> <br>
+         <input type="checkbox" id="item4" value="13" />
+         <label for="item4">Custom PC Building ($500.00)</label>  <br> <br>
+         <input type="button" id="submit" value="Submit" />
+      </form> <br> <br>
+        <div>
+          <p id="total"> </p>
+        </div>
+        <h2 style="text-align:center;"> Reminder, these are only estimates! </h2> <!-- Reminder of this being estimates and rates are subject to change --> 
+        <p style="text-align:center;">Quoted prices may be higher than the estimate calculator. <br> This is due to labor, parts, and any computer component disposal fees not being included.</p>
+      </article>
+      <script>
+      var products = ["Troubleshooting Operating System ($50.00)", "Troubleshooting Networking Issues ($75.00)", "Hardware Issues or Upgrades ($100.00)", "Custom PC Building ($500.00)"];
+      
+      var labels = document.getElementsByTagName ("label");  
+      
+      function processProducts() {
+      
+            for (var i=0; i<4; i++){
+              labels[i].innerHTML = products[i];
+            }
+      }
+      
+        if (window.addEventListener) {
+          window.addEventListener ("load", processProducts, false) ;
+        } else if (window.attachEvent) {
+          window.attachEvent ("onload", processProducts) ;
+        }
+  
+     
+     </script> 
+    
+      <footer>
+         <!-- added image to the footer area -->
+         <p style="text-align:center;"><img src="https://cdn.gomix.com/4d1bdeab-81d4-4367-a83f-aca95f804cdf%2Fusa-support-badge1.png" /></p> 
+         <p>PC Support Pros &bull; Grasonville, Maryland</p>
+      </footer>
+   </div>
+  <script src = "script.js"> </script>
+</body>
+</html>
